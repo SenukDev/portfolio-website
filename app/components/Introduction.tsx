@@ -16,11 +16,11 @@ const Introduction = () => {
                     />
                     <div>
                         <h1 className="text-4xl md:text-5xl font-bold">Senuk Jayawickrama</h1>
-                        <p className="text-xl">Software Developer</p>
+                        <p className="text-lg md:text-xl">Software Developer</p>
                         <Location/>
                     </div>
                 </div>
-                <p className="text-lg leading-relaxed">
+                <p className="text-md md:text-lg leading-relaxed">
                     I'm a software developer graduate. sdkjf a sdf jkasdlfkj a sdlfjknansd kjlfnjlakd sflkajsdf kjnasdlkjf laksdjf kljasndf  
                     asdf kjnasdj fn asdk jfnkjl afsd klajsdfn akjsdfnl kasdklj fnlkajsd fjgs dfgnsdklfjngj sdfg
                 </p>
