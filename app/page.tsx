@@ -6,11 +6,15 @@ import Experience from "./components/Experience";
 
 export default function Home() {
     return (
-        <main className=" text-white mx-auto max-w-3xl pt-24">
+        <main className=" text-white mx-auto max-w-3xl space-y-2">
             <Introduction/>
+            <hr></hr>
             <Skills/>
+            <hr></hr>
             <Education/>
+            <hr></hr>
             <Projects/>
+            <hr></hr>
             <Experience/>
         </main>
     );
