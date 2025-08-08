@@ -83,6 +83,7 @@ const Projects = () => {
                     "All CSS was <strong>tailor-made</strong> and no <strong>template</strong> was used",
                 ]}
                 videoUrl="https://www.youtube.com/embed/aBAV-xB1hyk?si=SW1sglgIrpJUq47N"
+                sourceUrl="https://github.com/SenukDev/Multiplayer-Networking"
             />
         </div>
     )

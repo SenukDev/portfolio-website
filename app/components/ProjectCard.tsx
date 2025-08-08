@@ -13,6 +13,7 @@ type ProjectCardProps = {
     tags: Tag[];
     imageUrl?: string;
     visitUrl?: string;
+    sourceUrl?: string;
     videoUrl?: string;
 };
 
@@ -22,6 +23,7 @@ export default function ProjectCard({
     tags,
     visitUrl,
     imageUrl,
+    sourceUrl,
     videoUrl
 }: ProjectCardProps) {
     return (
@@ -67,13 +69,20 @@ export default function ProjectCard({
                         <iframe className="absolute top-0 left-0 w-full h-full rounded-lg" src={videoUrl} title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                 )}
-                {visitUrl && (
-                    <div className="flex justify-end gap-4">
+                
+                <div className="flex justify-end gap-4">
+                    {sourceUrl && (
+                        <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="border px-4 py-1 rounded-full text-sm md:text-lg">
+                            Source Code
+                        </a>
+                    )}
+                    {visitUrl && (
                         <a href={visitUrl} target="_blank" rel="noopener noreferrer" className="border px-4 py-1 rounded-full text-sm md:text-lg">
                             Visit Page
                         </a>
-                    </div>
-                )}
+                    )}
+                </div>
+                
             </div>
         </>
     );
