@@ -17,12 +17,12 @@ const SkillsTable = () => {
             {skills.map((skill) => (
             <div
                 key={skill}
-                className="border border-white py-2 px-4 text-center text-sm sm:text-base"
+                className="border border-white py-2 px-4 text-center text-sm sm:text-base rounded-lg"
             >
                 {skill}
             </div>
             ))}
-      </div>
+        </div>
     )
 }
 
