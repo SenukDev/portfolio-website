@@ -1,72 +1,80 @@
+import Image from 'next/image';
+
 type Tag = {
-  name: string;
-  color?: string;
+    name: string;
+    color?: string;
 };
 
+type DescriptionItem = string | { content: string; indent?: boolean };
+
 type ProjectCardProps = {
-  title: string;
-  description: string[];
-  tags: Tag[];
-  visitUrl: string;
+    title: string;
+    description: DescriptionItem[];
+    tags: Tag[];
+    imageUrl?: string;
+    visitUrl?: string;
+    videoUrl?: string;
 };
 
 export default function ProjectCard({
-  title,
-  description,
-  tags,
-  visitUrl,
+    title,
+    description,
+    tags,
+    visitUrl,
+    imageUrl,
+    videoUrl
 }: ProjectCardProps) {
     return (
-        <div className="w-full border border-gray-400 rounded-xl p-4 ">
-            <div className="flex justify-between gap-6 items-stretch">
-                <div className="flex-1 flex flex-col justify-between">
-                    <h3 className="text-md md:text-lg font-bold mb-2">{title}</h3>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {tags.map((tag, index) => (
-                        <span
-                            key={index}
-                            className={`px-3 py-1 text-xs font-medium rounded-full border ${
-                            tag.color ?? "border-white"
-                            }`}
-                        >
-                            {tag.name}
-                        </span>
-                        ))}
+        <>
+            <div className="text-2xl md:text-3xl font-bold mb-2">{title}</div>
+            <div className="px-6">
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {tags.map((tag, index) => (
+                    <span key={index} className={`px-3 py-1 text-xs font-medium rounded-full border ${tag.color ?? "border-white" }`}>
+                        {tag.name}
+                    </span>
+                    ))}
+                </div>
+                {imageUrl && (
+                    <div className="relative w-full aspect-[16/9] mb-4">
+                        <Image 
+                            src={imageUrl}
+                            fill
+                            alt="Profile Picture"
+                            className="rounded-lg object-cover"
+                        />
                     </div>
+                )}
 
-                    <div className="text-sm mb-4">
-                        <ul className="list-disc list-inside space-y-1">
-                        {description.map((line, index) => (
-                            <li
+                <div className="text-md mb-4">
+                    <ul className="list-disc list-inside space-y-1">
+                    {description.map((item, index) => {
+                        const isIndented = typeof item !== "string" && item.indent;
+                        const content = typeof item === "string" ? item : item.content;
+
+                        return (
+                        <li
                             key={index}
-                            dangerouslySetInnerHTML={{ __html: line }}
-                            className="text-sm"
-                            />
-                        ))}
-                        </ul>
+                            dangerouslySetInnerHTML={{ __html: content }}
+                            className={`text-md ${isIndented ? "ml-6 list-[circle]" : ""}`}
+                        />
+                        );
+                    })}
+                    </ul>
+                </div>
+                {videoUrl && (
+                    <div className="relative w-full aspect-[16/9]  mb-4">
+                        <iframe className="absolute top-0 left-0 w-full h-full rounded-lg" src={videoUrl} title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
-
-                    <div className="self-end">
-                        <a
-                            href={visitUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="border px-4 py-1 rounded-full text-md"
-                        >
-                        Visit
+                )}
+                {visitUrl && (
+                    <div className="flex justify-end gap-4">
+                        <a href={visitUrl} target="_blank" rel="noopener noreferrer" className="border px-4 py-1 rounded-full text-sm md:text-lg">
+                            Visit Page
                         </a>
                     </div>
-                </div>
-                <div className="w-[60px] border-l border-gray-400 rounded-r-lg overflow-hidden">
-                    <button
-                        className="w-full h-full flex items-center justify-center"
-                        aria-label="Expand section"
-                    >
-                        <span className="text-2xl font-bold">▼</span>
-                    </button>
-                </div>
+                )}
             </div>
-        </div>
+        </>
     );
 }

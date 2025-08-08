@@ -5,11 +5,11 @@ const SkillsTable = () => {
         "Javascript",
         "HTML 5",
         "CSS",
-        "CakePHP",
-        "RUST",
-        "Networking",
+        "PHP",
         "React",
         "Next.js",
+        "RUST",
+        "Networking",
   ];
 
     return (

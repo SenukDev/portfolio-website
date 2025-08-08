@@ -19,6 +19,7 @@ const Introduction = () => {
                         <h1 className="text-4xl md:text-5xl font-bold">Senuk Jayawickrama</h1>
                         <p className="text-lg md:text-xl">Software Developer</p>
                         <Location/>
+                        <p className="text-md md:text-lg"><a href="https://www.linkedin.com/in/senuk-jayawickrama/" target="_blank" rel="noopener noreferrer" className="inline-flex text-md md:text-lg items-center text-blue-500 hover:text-blue-400 gap-2">LinkedIn</a>, <a href="https://github.com/SenukDev" target="_blank" rel="noopener noreferrer" className="inline-flex text-md md:text-lg items-center text-blue-500 hover:text-blue-400 gap-2">Github</a>, <a href="https://www.youtube.com/@senuk_dev" target="_blank" rel="noopener noreferrer" className="inline-flex text-md md:text-lg items-center text-blue-500 hover:text-blue-400 gap-2">Youtube</a></p>
                     </div>
                 </div>
                 <p className="text-md md:text-lg leading-relaxed">
