@@ -23,8 +23,10 @@ const Introduction = () => {
                     </div>
                 </div>
                 <p className="text-md md:text-lg leading-relaxed">
-                    I'm a software developer graduate. sdkjf a sdf jkasdlfkj a sdlfjknansd kjlfnjlakd sflkajsdf kjnasdlkjf laksdjf kljasndf  
-                    asdf kjnasdj fn asdk jfnkjl afsd klajsdfn akjsdfnl kasdklj fnlkajsd fjgs dfgnsdklfjngj sdfg
+                    Software Developer with experience in MySQL databases, Next JS, CakePHP, and building responsive, full-stack
+                    web applications and real-time multiplayer games. Led development of client-facing projects using Agile
+                    methodologies, implemented secure backend systems, and integrated APIs like Stripe and Firebase. Committed to
+                    delivering clean, scalable code and intuitive user experiences across mobile and desktop platforms.
                 </p>
             </div>
         </div>
