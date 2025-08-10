@@ -29,14 +29,14 @@ export default function ProjectCard({
     return (
         <>
             <div className="text-2xl md:text-3xl font-bold mb-2">{title}</div>
-            <div className="px-6">
-                <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mb-4">
                     {tags.map((tag, index) => (
                     <span key={index} className={`px-3 py-1 text-xs font-medium rounded-full border ${tag.color ?? "border-white" }`}>
                         {tag.name}
                     </span>
                     ))}
                 </div>
+            <div className="px-6">
                 {imageUrl && (
                     <div className="relative w-full aspect-[16/9] mb-4">
                         <Image 
