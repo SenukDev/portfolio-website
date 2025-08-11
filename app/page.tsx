@@ -1,6 +1,5 @@
 'use client'
 
-// Install once: npm i framer-motion
 import { motion, type Variants } from 'framer-motion'
 
 import Education from './components/Education'
@@ -8,6 +7,7 @@ import Introduction from './components/Introduction'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Description from './components/Description'
+import InteractiveStars from './components/InteractiveStars'
 
 const container: Variants = {
     hidden: {},
@@ -42,6 +42,7 @@ export default function Home() {
         initial="hidden"
         animate="show"
         >
+        <InteractiveStars />
         <motion.section variants={item}>
             <Introduction />
         </motion.section>
