@@ -17,7 +17,9 @@ const SkillsTable = () => {
             {skills.map((skill) => (
             <div
                 key={skill}
-                className="border border-white py-2 px-4 text-center text-sm sm:text-base rounded-lg"
+                className="border border-white py-2 px-4 text-center text-sm sm:text-base rounded-lg 
+                     hover:bg-gray-200 hover:border-gray-300 hover:text-gray-800 
+                     cursor-default select-none transition-colors duration-200"
             >
                 {skill}
             </div>

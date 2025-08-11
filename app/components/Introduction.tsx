@@ -22,12 +22,6 @@ const Introduction = () => {
                         <p className="text-md md:text-lg"><a href="https://www.linkedin.com/in/senuk-jayawickrama/" target="_blank" rel="noopener noreferrer" className="inline-flex text-md md:text-lg items-center text-blue-500 hover:text-blue-400 gap-2">LinkedIn</a>, <a href="https://github.com/SenukDev" target="_blank" rel="noopener noreferrer" className="inline-flex text-md md:text-lg items-center text-blue-500 hover:text-blue-400 gap-2">Github</a>, <a href="https://www.youtube.com/@senuk_dev" target="_blank" rel="noopener noreferrer" className="inline-flex text-md md:text-lg items-center text-blue-500 hover:text-blue-400 gap-2">Youtube</a></p>
                     </div>
                 </div>
-                <p className="text-md md:text-lg leading-relaxed">
-                    Software Developer with experience in MySQL databases, Next JS, CakePHP, and building responsive, full-stack
-                    web applications and real-time multiplayer games. Led development of client-facing projects using Agile
-                    methodologies, implemented secure backend systems, and integrated APIs like Stripe and Firebase. Committed to
-                    delivering clean, scalable code and intuitive user experiences across mobile and desktop platforms.
-                </p>
             </div>
         </div>
     )
