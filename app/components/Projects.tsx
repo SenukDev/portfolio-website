@@ -56,6 +56,26 @@ const Projects = () => {
             />
             <hr></hr>
             <ProjectCard
+                title="3D Interactive Website using WebGPU and THREE js"
+                tags={[
+                    { name: "TypeScript", color: "border-cyan-700" },
+                    { name: "RUST", color: "border-orange-500" },
+                    { name: "THREE js", color: "border-purple-400" },
+                    { name: "WebGPU", color: "border-yellow-700" },
+                    { name: "THREE js Shading Language (TSL)", color: "border-pink-600" },
+                    { name: "HTML5", color: "border-green-600" },
+                    { name: "CSS", color: "border-yellow-400" },
+                ]}
+                description={[
+                    "Connected a RUST Wasm ECS to a <strong>Typescript 3D renderer</strong> using THREE js",
+                    "Used the experimental <strong>WebGPU Renderer</strong> to fully utilise the Computer's GPU within a web application",
+                    "Created Shaders using the TSL which is <strong>GPU programming</strong>"
+                ]}
+                videoUrl="https://www.youtube.com/embed/FsiH818f-zE?si=-PVFJ66SKtwzvXlB"
+                sourceUrl="https://github.com/SenukDev/mmo-3d"
+            />
+            <hr></hr>
+            <ProjectCard
                 title="HTTP3 WebTransport Server using QUIC"
                 tags={[
                     { name: "RUST", color: "border-orange-500" },

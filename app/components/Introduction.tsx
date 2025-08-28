@@ -9,7 +9,7 @@ const Introduction = () => {
                 <div className="flex items-center gap-6">
                     <div className="relative aspect-square w-32 md:w-48">
                         <Image
-                            src="/profile.png"
+                            src="/profile.jpg"
                             alt="Profile Picture"
                             fill
                             className="rounded-lg object-cover"
